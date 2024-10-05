@@ -67,3 +67,4 @@ a_2 = a * a # or a**2
        [ 0,  1,  4,  9, 16, 25, 36, 49, 64, 81]])
 """
 ```
+This doesn't even scratch the surface of what capabilities are built into `numpy`, but gives you an idea of the power behind it. Happy hiking!
