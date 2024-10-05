@@ -35,7 +35,35 @@ for row in a:
 However, with `numpy` this becomes
 ```python
 a = [list(range(10)) for _ in range(10)]
+a = np.array(a)
 local_sums = a.sum(axis=1)
 # local_sims = array([45, 45, 45, 45, 45, 45, 45, 45, 45, 45])
 ```
-Again, one line! Another advantage about using vectorization in `numpy` is multiplying matrices. Let's take the previus list of lists `a`, and multiply it by itself, or compute $\text{a}^2$. 
+Again, one line! Another advantage about using vectorization in `numpy` is multiplying matrices. Let's take the previus list of lists `a`, and multiply it by itself, or compute $\text{a}^2$. Proceeding without `numpy`:
+```python
+a = [list(range(10)) for _ in range(10)]
+a_2 = []
+for row in a:
+    row_2 = []
+    for elem in row:
+        row_2.append(elem**2)
+    a_2.append(row_2)
+# a_2 = [[0, 1, 4, 9, 16, 25, 36, 49, 64, 81], [0, 1, 4, 9, 16, 25, 36, 49, 64, 81], [0, 1, 4, 9, 16, 25, 36, 49, 64, 81], [0, 1, 4, 9, 16, 25, 36, 49, 64, 81], [0, 1, 4, 9, 16, 25, 36, 49, 64, 81], [0, 1, 4, 9, 16, 25, 36, 49, 64, 81], [0, 1, 4, 9, 16, 25, 36, 49, 64, 81], [0, 1, 4, 9, 16, 25, 36, 49, 64, 81], [0, 1, 4, 9, 16, 25, 36, 49, 64, 81], [0, 1, 4, 9, 16, 25, 36, 49, 64, 81]]
+```
+With numpy, yields another one liner:
+```python
+a = [list(range(10)) for _ in range(10)]
+a = np.array(a)
+a_2 = a * a # or a**2
+""" a_2 = [array([[ 0,  1,  4,  9, 16, 25, 36, 49, 64, 81],
+       [ 0,  1,  4,  9, 16, 25, 36, 49, 64, 81],
+       [ 0,  1,  4,  9, 16, 25, 36, 49, 64, 81],
+       [ 0,  1,  4,  9, 16, 25, 36, 49, 64, 81],
+       [ 0,  1,  4,  9, 16, 25, 36, 49, 64, 81],
+       [ 0,  1,  4,  9, 16, 25, 36, 49, 64, 81],
+       [ 0,  1,  4,  9, 16, 25, 36, 49, 64, 81],
+       [ 0,  1,  4,  9, 16, 25, 36, 49, 64, 81],
+       [ 0,  1,  4,  9, 16, 25, 36, 49, 64, 81],
+       [ 0,  1,  4,  9, 16, 25, 36, 49, 64, 81]])
+"""
+```
