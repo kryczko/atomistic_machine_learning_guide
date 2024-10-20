@@ -1,6 +1,6 @@
 # The Hitchikers Guide to Atomistic Machine Learning
 
-This book assumes that you have some basic understanding of Python, and that's it. We start with the basics of computing and work our way up the mountain to discuss some of the most relevant topics in machine learning applied to atomistic systems. I use the word "atomistic" rather than "chemistry" or "materials" because the underlying ideas are the same.
+This guide assumes that you have some basic understanding of Python, and that's it. We start with the basics of computing and work our way up the mountain to discuss some of the most relevant topics in machine learning applied to atomistic systems. I use the word "atomistic" rather than "chemistry" or "materials" because the underlying ideas are the same.
 
 *Note* Chapters may change
 
