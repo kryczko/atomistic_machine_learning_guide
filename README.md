@@ -7,7 +7,7 @@ This guide assumes that you have some basic understanding of Python, and that's 
 ## Chapters
 #### [Chapter 1 - Introduction to Vectorization](https://github.com/kryczko/atomistic_machine_learning_guide/blob/main/Chapter%201%20-%20Introduction%20to%20Vectorization.md)
 #### [Chapter 2 - Introduction to PyTorch](https://github.com/kryczko/atomistic_machine_learning_guide/blob/main/Chapter%202%20-%20Introduction%20to%20Pytorch.md)
-#### Chapter 3 - Basics of Neural Networks
+#### [Chapter 3 - Basics of Artificial Neural Networks](https://github.com/kryczko/atomistic_machine_learning_guide/blob/main/Chapter%203%20-%20Basics%20of%20Artificial%20Neural%20Networks.md)
 #### Chapter 4 - Basics of Data Generation
 #### Chapter 5 - Basics of Training Models
 #### Chapter 6 - Initial Ideas of Atomistic Machine Learning
