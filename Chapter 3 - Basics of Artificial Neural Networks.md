@@ -7,7 +7,15 @@ Let's see how we can program a single neuron in `pytorch`. Let's start with a hi
 import torch
 x = torch.rand(1, 10) # a single vector with dimension 10
 ```
-This input, `x,` will be the input into the neuron. The output of a single neuron is one floating-point value, which means we will need 10 weights to multiply against. In addition, there is a single bias value defined for each layer (which is just a single neuron at this point). The computation then becomes
+This input, `x,` will be the input into the neuron. The output of a single neuron is one floating-point value, which means we will need 10 weights to multiply against. In addition, a single bias value is defined for each layer (which is just a single neuron at this point). The computation then becomes
 ```python
-weights = torch.rand(10, 1)
-bias = torch.rand(1)
+weights = torch.rand(10, 1, requires_grad=True) # add a requires_grad here so we can modify the weights!
+bias = torch.rand(1, requires_grad=True)
+output = x @ w + bias
+```
+To add in the non-linearity, we need an activation function. There are many variants, but let's use [SiLU](https://pytorch.org/docs/stable/generated/torch.nn.SiLU.html). This can be done by writing
+```python
+from torch.nn.functional inport silu
+activated = silu(output)
+```
+And just like that we've created everything we need for an ANN! Pytorch uses an interface, so we don't have to perform the matrix multiplications, and they initialize the weights for us given the input size and the number of neurons. This can be defined as follows:
