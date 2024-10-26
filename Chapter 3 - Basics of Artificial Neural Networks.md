@@ -15,7 +15,9 @@ output = x @ w + bias
 ```
 To add in the non-linearity, we need an activation function. There are many variants, but let's use [SiLU](https://pytorch.org/docs/stable/generated/torch.nn.SiLU.html). This can be done by writing
 ```python
-from torch.nn.functional inport silu
+from torch.nn.functional import silu
 activated = silu(output)
 ```
 And just like that we've created everything we need for an ANN! Pytorch uses an interface, so we don't have to perform the matrix multiplications, and they initialize the weights for us given the input size and the number of neurons. This can be defined as follows:
+```python
+from torch.nn import Linear 
