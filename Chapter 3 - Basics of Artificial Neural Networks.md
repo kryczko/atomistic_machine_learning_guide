@@ -48,4 +48,8 @@ class ResidualForward(nn.Module):
         super().__init__() # allows us to use methods from the parent class nn.Module
         self.input_dim = input_dim
         self.output_dim = output_dim
+        self.act = activation
+
+    def forward(self, x):
+        
 ```
