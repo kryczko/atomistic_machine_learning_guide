@@ -49,7 +49,8 @@ class ResidualForward(nn.Module):
         self.input_dim = input_dim
         self.output_dim = output_dim
         self.act = activation
+        self.layer = Linear(input_dim, output_dim)
 
     def forward(self, x):
-        
+        return x + self.act(self.linear(x))
 ```
